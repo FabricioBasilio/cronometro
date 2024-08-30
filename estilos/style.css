@@ -18,3 +18,30 @@ body {
     height: 100vh;
 }
 
+main {
+    background-color: var(--cor1);
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--cor2);
+}
+
+main p.cronometro {
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+main div.botoes {
+    background-color: var(--cor2);
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+footer {
+    background-color: var(--cor2);
+    height: 10%;
+}
