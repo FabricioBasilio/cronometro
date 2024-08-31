@@ -2,9 +2,9 @@
 
 :root {
     --cor1: #313638;
+    --cor2: #E8E9EB;
     --cor3: #F0544F;
     --cor4: #2D82B7;
-    --cor2: #E8E9EB;
 }
 
 * {
@@ -34,14 +34,42 @@ main p.cronometro {
 }
 
 main div.botoes {
-    background-color: var(--cor2);
-    width: 200px;
+    /* background-color: var(--cor2); */
+    width: 250px;
     display: flex;
     justify-content: space-evenly;
 
 }
 
+main div.botoes button {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+#botaoIniciar {
+    background-color: var(--cor4);
+    color: var(--cor2);
+    border: solid 2px var(--cor2);
+}
+
+#botaoPausar {
+    background-color: var(--cor3);
+    color: var(--cor2);
+    border: solid 2px var(--cor2);
+}
+
+#botaoMarcar {
+    background-color: var(--cor1);
+    color: var(--cor2);
+    border: solid 2px var(--cor2);
+}
+
 footer {
     background-color: var(--cor2);
     height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
