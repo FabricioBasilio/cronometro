@@ -52,18 +52,42 @@ main div.botoes button {
     background-color: var(--cor4);
     color: var(--cor2);
     border: solid 2px var(--cor2);
+    transition: all linear 0;
+    transition-duration: 0.2s;
 }
 
 #botaoPausar {
     background-color: var(--cor3);
     color: var(--cor2);
     border: solid 2px var(--cor2);
+    transition: all linear 0;
+    transition-duration: 0.2s;
 }
 
 #botaoMarcar {
     background-color: var(--cor1);
     color: var(--cor2);
     border: solid 2px var(--cor2);
+    transition: all linear 0;
+    transition-duration: 0.2s;
+}
+
+#botaoIniciar:hover {
+    background-color: var(--cor2);
+    color: var(--cor4);
+    border: solid 2px var(--cor4);
+}
+
+#botaoPausar:hover {
+    background-color: var(--cor2);
+    color: var(--cor3);
+    border: solid 2px var(--cor3);
+}
+
+#botaoMarcar:hover {
+    background-color: var(--cor2);
+    color: var(--cor1);
+    border: solid 2px var(--cor1);
 }
 
 footer {
@@ -72,4 +96,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--cor1);
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: var(--cor4);
 }
