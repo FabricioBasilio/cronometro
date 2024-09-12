@@ -13,9 +13,25 @@ segundos = 0;
 
 botaoIniciar.addEventListener("click", iniciarCronometro);
 
+botaoPausar.classList.add("botaoTransparente");
+botaoMarcar.classList.add("botaoTransparente");
+
+botaoPausar.classList.remove("botaoPausarHover");
+botaoMarcar.classList.remove("botaoMarcarHover");
+
 function iniciarCronometro() {
     botaoIniciar.removeEventListener("click", iniciarCronometro);
     const intervaloIncremento = setInterval(incrementar, 10);
+
+    botaoIniciar.innerText = "Continuar";
+    botaoIniciar.classList.add("botaoTransparente");
+    botaoIniciar.classList.remove("botaoIniciarHover");
+    
+    botaoPausar.classList.add("botaoPausarHover");
+    botaoPausar.classList.remove("botaoTransparente");
+
+    botaoMarcar.classList.add("botaoMarcarHover");
+    botaoMarcar.classList.remove("botaoTransparente");
 
     botaoPausar.addEventListener("click", () => pausar(intervaloIncremento));
 }
@@ -54,6 +70,13 @@ function incrementar() {
 
 function pausar(intervaloIncremento) {
     clearInterval(intervaloIncremento);
+
     botaoIniciar.innerText = "Continuar"
+    botaoIniciar.classList.add("botaoIniciarHover");
+    botaoIniciar.classList.remove("botaoTransparente");
+
+    botaoPausar.classList.remove("botaoPausarHover");
+    botaoPausar.classList.add("botaoTransparente");
+
     botaoIniciar.addEventListener("click", iniciarCronometro);
 }
