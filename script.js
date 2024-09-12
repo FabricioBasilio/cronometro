@@ -15,11 +15,12 @@ botaoIniciar.addEventListener("click", iniciarCronometro);
 
 function iniciarCronometro() {
     botaoIniciar.removeEventListener("click", iniciarCronometro);
-    incrementar();
+    const intervaloIncremento = setInterval(incrementar, 10);
+
+    botaoPausar.addEventListener("click", () => pausar(intervaloIncremento));
 }
 
 function incrementar() {
-    setInterval(() => {
 
         milissegundos++;
 
@@ -49,7 +50,10 @@ function incrementar() {
         if (segundos >= 10) spanSegundos.innerText = segundos;
         else spanSegundos.innerText = `0${segundos}`
 
+}
 
-
-    }, 0.1);
+function pausar(intervaloIncremento) {
+    clearInterval(intervaloIncremento);
+    botaoIniciar.innerText = "Continuar"
+    botaoIniciar.addEventListener("click", iniciarCronometro);
 }

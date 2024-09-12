@@ -31,6 +31,7 @@ main {
 main p.cronometro {
     font-size: 30px;
     letter-spacing: 3px;
+    font-family: monospace;
 }
 
 main div.botoes {
