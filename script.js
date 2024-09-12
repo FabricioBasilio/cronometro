@@ -1,6 +1,6 @@
 const botaoIniciar = document.getElementById("botaoIniciar");
 const botaoPausar = document.getElementById("botaoPausar");
-const botaoMarcar = document.getElementById("botaoMarcar");
+const botaoReiniciar = document.getElementById("botaoReiniciar");
 const spanMilissegundos = document.getElementById("milissegundos");
 const spanSegundos = document.getElementById("segundos");
 const spanMinutos = document.getElementById("minutos");
@@ -14,10 +14,10 @@ segundos = 0;
 botaoIniciar.addEventListener("click", iniciarCronometro);
 
 botaoPausar.classList.add("botaoTransparente");
-botaoMarcar.classList.add("botaoTransparente");
+botaoReiniciar.classList.add("botaoTransparente");
 
 botaoPausar.classList.remove("botaoPausarHover");
-botaoMarcar.classList.remove("botaoMarcarHover");
+botaoReiniciar.classList.remove("botaoMarcarHover");
 
 function iniciarCronometro() {
     botaoIniciar.removeEventListener("click", iniciarCronometro);
@@ -30,8 +30,8 @@ function iniciarCronometro() {
     botaoPausar.classList.add("botaoPausarHover");
     botaoPausar.classList.remove("botaoTransparente");
 
-    botaoMarcar.classList.add("botaoMarcarHover");
-    botaoMarcar.classList.remove("botaoTransparente");
+    botaoReiniciar.classList.add("botaoReiniciarHover");
+    botaoReiniciar.classList.remove("botaoTransparente");
 
     botaoPausar.addEventListener("click", () => pausar(intervaloIncremento));
 }
