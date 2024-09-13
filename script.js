@@ -5,7 +5,7 @@ const spanMilissegundos = document.getElementById("milissegundos");
 const spanSegundos = document.getElementById("segundos");
 const spanMinutos = document.getElementById("minutos");
 
-let milissegundos, minutos, segundos;
+let milissegundos, minutos, segundos, intervaloIncremento;
 
 milissegundos = 0;
 minutos = 0;
@@ -21,7 +21,7 @@ botaoReiniciar.classList.remove("botaoReiniciarHover");
 
 function iniciarCronometro() {
     botaoIniciar.removeEventListener("click", iniciarCronometro);
-    const intervaloIncremento = setInterval(incrementar, 10);
+    intervaloIncremento = setInterval(incrementar, 10);
 
     botaoIniciar.innerText = "Continuar";
     botaoIniciar.classList.add("botaoTransparente");
@@ -31,7 +31,7 @@ function iniciarCronometro() {
     botaoPausar.classList.remove("botaoTransparente");
     
     
-    botaoPausar.addEventListener("click", () => pausar(intervaloIncremento));
+    botaoPausar.addEventListener("click", pausar);
 }
 
 function incrementar() {
@@ -66,7 +66,7 @@ function incrementar() {
         
     }
 
-    function pausar(intervaloIncremento) {
+    function pausar() {
         botaoPausar.removeEventListener("click", pausar);
         clearInterval(intervaloIncremento);
         
