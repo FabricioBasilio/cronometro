@@ -17,7 +17,7 @@ botaoPausar.classList.add("botaoTransparente");
 botaoReiniciar.classList.add("botaoTransparente");
 
 botaoPausar.classList.remove("botaoPausarHover");
-botaoReiniciar.classList.remove("botaoMarcarHover");
+botaoReiniciar.classList.remove("botaoReiniciarHover");
 
 function iniciarCronometro() {
     botaoIniciar.removeEventListener("click", iniciarCronometro);
@@ -29,15 +29,13 @@ function iniciarCronometro() {
     
     botaoPausar.classList.add("botaoPausarHover");
     botaoPausar.classList.remove("botaoTransparente");
-
-    botaoReiniciar.classList.add("botaoReiniciarHover");
-    botaoReiniciar.classList.remove("botaoTransparente");
-
+    
+    
     botaoPausar.addEventListener("click", () => pausar(intervaloIncremento));
 }
 
 function incrementar() {
-
+    
         milissegundos++;
 
         if (milissegundos === 100) {
@@ -53,30 +51,52 @@ function incrementar() {
         if (segundos === 60) {
             segundos = 0;
             minutos++;
-
+            
             spanMinutos.innerText = `0${minutos}`;
         }
-
+        
         if (minutos >= 10)
             spanMinutos.innerText = minutos;
         else spanMinutos.innerText = `0${minutos}`
 
 
-
+        
         if (segundos >= 10) spanSegundos.innerText = segundos;
         else spanSegundos.innerText = `0${segundos}`
+        
+    }
 
-}
-
-function pausar(intervaloIncremento) {
-    clearInterval(intervaloIncremento);
-
+    function pausar(intervaloIncremento) {
+        botaoPausar.removeEventListener("click", pausar);
+        clearInterval(intervaloIncremento);
+        
     botaoIniciar.innerText = "Continuar"
     botaoIniciar.classList.add("botaoIniciarHover");
     botaoIniciar.classList.remove("botaoTransparente");
 
     botaoPausar.classList.remove("botaoPausarHover");
     botaoPausar.classList.add("botaoTransparente");
+    
+    botaoReiniciar.classList.add("botaoReiniciarHover");
+    botaoReiniciar.classList.remove("botaoTransparente");
 
     botaoIniciar.addEventListener("click", iniciarCronometro);
+    botaoReiniciar.addEventListener("click", reiniciarCronometro);
+}
+
+function reiniciarCronometro() {
+    botaoReiniciar.removeEventListener("click", reiniciarCronometro);
+
+    
+    botaoReiniciar.classList.add("botaoTransparente");
+    botaoReiniciar.classList.remove("botaoReiniciarHover");
+    
+    milissegundos = 0;
+    minutos = 0;
+    segundos = 0;
+    
+    botaoIniciar.innerText = "Iniciar";
+    spanMilissegundos.innerText = "00";
+    spanSegundos.innerText = "00";
+    spanMinutos.innerText = "00";
 }
