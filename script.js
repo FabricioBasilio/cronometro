@@ -21,6 +21,8 @@ botaoReiniciar.classList.remove("botaoReiniciarHover");
 
 function iniciarCronometro() {
     botaoIniciar.removeEventListener("click", iniciarCronometro);
+    botaoReiniciar.removeEventListener("click", reiniciarCronometro);
+
     intervaloIncremento = setInterval(incrementar, 10);
 
     botaoIniciar.innerText = "Continuar";
@@ -29,6 +31,9 @@ function iniciarCronometro() {
     
     botaoPausar.classList.add("botaoPausarHover");
     botaoPausar.classList.remove("botaoTransparente");
+
+    botaoReiniciar.classList.add("botaoTransparente");
+    botaoReiniciar.classList.remove("botaoReiniciarHover");
     
     
     botaoPausar.addEventListener("click", pausar);
