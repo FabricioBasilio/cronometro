@@ -7,6 +7,29 @@
     --cor4: #2D82B7;
 }
 
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 3.2em;
+    }
+
+    main p.cronometro {
+        font-size: 3.2em;
+    }
+
+    main div.botoes {
+        width: 325px;
+    }
+
+    main div.botoes button {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,13 +51,13 @@ main {
     color: var(--cor2);
 }
 
-main p.cronometro {
+p.cronometro {
     font-size: 30px;
     letter-spacing: 3px;
     font-family: monospace;
 }
 
-main div.botoes {
+div.botoes {
     /* background-color: var(--cor2); */
     width: 250px;
     display: flex;
@@ -42,7 +65,7 @@ main div.botoes {
 
 }
 
-main div.botoes button {
+div.botoes button {
     padding: 10px;
     border-radius: 10px;
     outline: none;
@@ -108,7 +131,7 @@ footer {
     color: var(--cor1);
 }
 
-footer > p > a {
+footer>p>a {
     text-decoration: none;
     color: var(--cor4);
 }
