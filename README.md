@@ -4,7 +4,11 @@
 
 # Cronômetro
 
-Um projeto de Desenvolvedor front-end, um simples cronômetro responsivo desenvolvido com as tecnologias HTML, CSS e Javascript.  
+Um projeto de Desenvolvedor front-end, um simples cronômetro responsivo desenvolvido com as tecnologias HTML, CSS e Javascript. Fiz esse projeto com o intuito de praticar minhas habilidades com Javascript e DOM. 
 
 
 ![cronometro](https://github.com/user-attachments/assets/ded27b4c-5bb5-4839-9135-3f7e7d7657b3)
+
+# Acesso ao projeto  
+
+Você pode acessar o projeto através da descrição ou <a href="https://fabriciobasilio.github.io/cronometro/" target="_blank">aqui</a>.
