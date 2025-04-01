@@ -11,6 +11,6 @@ Um projeto de Desenvolvedor front-end, um simples cronômetro responsivo desenvo
 
 ![cronometro](https://github.com/user-attachments/assets/ded27b4c-5bb5-4839-9135-3f7e7d7657b3)
 
-# Acesso ao projeto  
+## Acesso ao projeto  
 
 Você pode acessar o projeto através da descrição ou <a href="https://fabriciobasilio.github.io/cronometro/" target="_blank">aqui</a>.
