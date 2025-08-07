@@ -9,7 +9,8 @@
 Um projeto de Desenvolvedor front-end, um simples cronômetro responsivo desenvolvido com as tecnologias HTML, CSS e Javascript. Fiz esse projeto com o intuito de praticar minhas habilidades com Javascript e DOM. 
 
 
-![cronometro](https://github.com/user-attachments/assets/ded27b4c-5bb5-4839-9135-3f7e7d7657b3)
+
+<img width="1366" height="768" alt="cronometro" src="https://github.com/user-attachments/assets/b611ac5e-d85e-4e78-8511-6a9bb6e3af8c" />
 
 ## Acesso ao projeto  
 
